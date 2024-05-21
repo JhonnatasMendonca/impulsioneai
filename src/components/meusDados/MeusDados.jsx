@@ -262,7 +262,7 @@ function MeusDados()
         const [numero, setNumero] = useState('');
         const [bairro, setBairro] = useState('');
 
-        axios.get(`http://localhost:8080/empreendedores/${empreendedorId}`)
+        axios.get(`https://impulsioneai-api.onrender.com/empreendedores/${empreendedorId}`)
         .then(response => {
             const empreendedor = response.data;
 
@@ -288,7 +288,7 @@ function MeusDados()
     //GET DO NICHO
         const [nicho, setNicho] = useState('');
         
-        axios.get(`http://localhost:8080/empreendedores/${empreendedorId}`)
+        axios.get(`https://impulsioneai-api.onrender.com/empreendedores/${empreendedorId}`)
         .then(response => {
             const empreendedor = response.data;
 
@@ -308,7 +308,7 @@ function MeusDados()
         const [PrimeirosDigitos, setPrimeirosDigitos] = useState('');
         const [nomeCartao, setNomeCartao] = useState('');
       
-        axios.get(`http://localhost:8080/empreendedores/${empreendedorId}`)
+        axios.get(`https://impulsioneai-api.onrender.com/empreendedores/${empreendedorId}`)
         .then(response => {
             const empreendedor = response.data;
 

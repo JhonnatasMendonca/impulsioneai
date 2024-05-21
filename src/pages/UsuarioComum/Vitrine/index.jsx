@@ -121,7 +121,7 @@ function Vitrine() {
         event.preventDefault();
         console.log(dadosAvaliacao);
         try {
-            const resposta = await axios.post('http://localhost:8080/avaliacao', dadosAvaliacao);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/avaliacao', dadosAvaliacao);
             console.log(resposta.data);
             alert("Avaliação enviada com sucesso!");
             window.location.reload();

@@ -28,7 +28,7 @@ function EsqueciSenha()
         event.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:8080/verificaUsuarios?email=${email}`);
+            const response = await fetch(`https://impulsioneai-api.onrender.com/verificaUsuarios?email=${email}`);
             const dataText = await response.text();
 
             if (response.ok) {
@@ -72,7 +72,7 @@ function EsqueciSenha()
 
     const handleSubmitEmail = async (dadosEmail) => {
         try {
-            const resposta = await axios.post('http://localhost:8080/email', dadosEmail);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/email', dadosEmail);
             console.log(resposta.data);
         } catch (erro) {
             console.error('Ocorreu um erro ao enviar o e-mail:', erro);

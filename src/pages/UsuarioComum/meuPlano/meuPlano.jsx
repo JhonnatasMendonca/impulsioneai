@@ -42,7 +42,7 @@ function MeuPlano() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/empreendedores/' + localStorage.getItem('id'));
+                const response = await axios.get('https://impulsioneai-api.onrender.com/empreendedores/' + localStorage.getItem('id'));
 
                 const planoAtual = response.data.planoAssinatura;
                 setPlanoAssinatura(planoAtual);
@@ -71,7 +71,7 @@ function MeuPlano() {
      useEffect(() => {
          const fetchData = async () => {
              try {
-                 const response = await axios.get('http://localhost:8080/assinaturas');
+                 const response = await axios.get('https://impulsioneai-api.onrender.com/assinaturas');
                  const planos = response.data;
                  setPlanos(planos);
              } catch (error) {
@@ -109,7 +109,7 @@ function MeuPlano() {
                     nome: selectedPlano.nome
                 };
 
-                const response = await axios.put('http://localhost:8080/empreendedoresPlano/' + localStorage.getItem('id'), planoAssinaturaRecordDto);
+                const response = await axios.put('https://impulsioneai-api.onrender.com/empreendedoresPlano/' + localStorage.getItem('id'), planoAssinaturaRecordDto);
                 
                 if (response.ok){
                     alert('Plano atualizado com sucesso!');

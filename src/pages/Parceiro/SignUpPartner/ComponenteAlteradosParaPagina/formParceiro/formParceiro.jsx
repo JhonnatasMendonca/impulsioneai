@@ -137,7 +137,7 @@ function FormPartner()
         event.preventDefault();
         
         try {
-            const resposta = await axios.post('http://localhost:8080/empreendedores', dados);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/empreendedores', dados);
             console.log(resposta.data);
             const primeiroNome = resposta.data.nomeExibicao;
 
@@ -196,7 +196,7 @@ function FormPartner()
         
 
         try {
-            const resposta = await axios.post('http://localhost:8080/email', dadosEmail);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/email', dadosEmail);
             console.log(resposta.data);
             
         } catch (erro) {

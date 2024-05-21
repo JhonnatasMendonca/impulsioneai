@@ -92,7 +92,7 @@ const handleCancelar = () => {
 useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/cartao/' + localStorage.getItem('id'));
+            const response = await axios.get('https://impulsioneai-api.onrender.com/cartao/' + localStorage.getItem('id'));
             const cartao = response.data;
             // console.log(cartao);
             
@@ -164,7 +164,7 @@ useEffect(() => {
                     'Authorization': `Bearer ${token}`
                 }
             };
-            const resposta = await axios.post('http://localhost:8080/cartao', dadosCartaoAtualizados, config);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/cartao', dadosCartaoAtualizados, config);
             // console.log(resposta.data);
             alert("Cartão cadastrado com sucesso!");
             window.location = "/meusCartoes";
@@ -180,7 +180,7 @@ useEffect(() => {
     
     const deleteCartao = async (idCartao) => {
         try {
-          const response = await fetch(`http://localhost:8080/deleteCartao/${idCartao}`, {
+          const response = await fetch(`https://impulsioneai-api.onrender.com/deleteCartao/${idCartao}`, {
             method: 'DELETE',
           });
     

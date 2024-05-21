@@ -113,7 +113,7 @@ function EditarDadosEmp() {
         const empreendedorId = localStorage.getItem('id');
         console.log(empreendedorId);
 
-        axios.put(`http://localhost:8080/empreendedores/${empreendedorId}`, jsonDados)
+        axios.put(`https://impulsioneai-api.onrender.com/empreendedores/${empreendedorId}`, jsonDados)
             .then(response => {
                 alert("Perfil atualizado com sucesso!");
                 console.log('Perfil atualizada com sucesso:', response.data);

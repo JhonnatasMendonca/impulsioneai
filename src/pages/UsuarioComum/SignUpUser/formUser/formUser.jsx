@@ -82,7 +82,7 @@ function FormUser()
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const resposta = await axios.post('http://localhost:8080/usuarios', dados);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/usuarios', dados);
             console.log(resposta.data);
             const primeiroNome = resposta.data.nomeExibicao;
 
@@ -124,7 +124,7 @@ function FormUser()
         
 
         try {
-            const resposta = await axios.post('http://localhost:8080/email', dadosEmail);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/email', dadosEmail);
             console.log(resposta.data);
             
         } catch (erro) {

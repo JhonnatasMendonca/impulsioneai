@@ -17,7 +17,7 @@ function ChangePassword() {
         if (senha === confirmarSenha && codigoVerificacao === localStorage.getItem('codigoAcesso')) {
             // Envia a senha para o backend
             try {
-                const response = await axios.put(`http://localhost:8080/editarSenha/${localStorage.getItem('idUsuario')}`, {
+                const response = await axios.put(`https://impulsioneai-api.onrender.com/editarSenha/${localStorage.getItem('idUsuario')}`, {
                     senha: senha
                 });
                 alert('Senha alterada com sucesso!');

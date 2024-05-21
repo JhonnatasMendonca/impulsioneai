@@ -33,7 +33,7 @@ function InfoEmpreendedores({
         
 
         try {
-            const resposta = await axios.post('http://localhost:8080/email', dadosEmail);
+            const resposta = await axios.post('https://impulsioneai-api.onrender.com/email', dadosEmail);
             console.log(resposta.data);
             
         } catch (erro) {
@@ -55,7 +55,7 @@ function InfoEmpreendedores({
                     emailFrom: "impulsioneai@gmail.com",
                     emailTo: email,
                     subject: "Bem-vindo (a) ao Impulsione AI",
-                    text: "Olá " + nomeExibicao + "," +"\n\nFicamos muito felizes em saber que você deseja ser um parceiro Impulsione aí. \n\nE hoje viemos com boas notícias, tá preparado(a)?\n\nVocê foi aceito na nossa plataforma e será nosso mais novo, empreendedor parceiro. \n\nEstamos com muitas expectativas para começar a impulsionar seu negócio. \n\nAcesse aqui a plataforma Impulsione aí através desse link:https://impulsione-ai.vercel.app \n\nAtenciosamente, equipe Impulsione aí."
+                    text: "Olá " + nomeExibicao + "," +"\n\nFicamos muito felizes em saber que você deseja ser um parceiro Impulsione aí. \n\nE hoje viemos com boas notícias, tá preparado(a)?\n\nVocê foi aceito na nossa plataforma e será nosso mais novo, empreendedor parceiro. \n\nEstamos com muitas expectativas para começar a impulsionar seu negócio. \n\nAcesse aqui a plataforma Impulsione aí através desse link:https://impulsioneai.vercel.app \n\nAtenciosamente, equipe Impulsione aí."
                 
                 });
                 alert("Solicitação aceita com sucesso!")
@@ -78,7 +78,7 @@ function InfoEmpreendedores({
                     emailFrom: "impulsioneai@gmail.com",
                     emailTo: email,
                     subject: "Ainda Queremos Você com a Impulsione aí",
-                    text: "Olá " + nomeExibicao + "," + "\n\nFicamos muito felizes em saber que você deseja ser um parceiro Impulsione aí.\n\nInfelizmente você não foi aceito na nossa plataforma.\n\nDevido aos seguintes motivos:\n\n1- foi constatado que você não é um microempreendedor.\n2- Seus dados não foram encontrados.\n\nMas não fica triste, você pode ainda ser nosso usuário impulsione aí. Ajudando a impulsionar pequenos negócios a se tornarem grandes.\n\nEai, vamos firmar esse compromisso?\n\nVem navegar aqui conosco: https://impulsione-ai.vercel.app \n\nAtenciosamente, equipe impulsione aí."
+                    text: "Olá " + nomeExibicao + "," + "\n\nFicamos muito felizes em saber que você deseja ser um parceiro Impulsione aí.\n\nInfelizmente você não foi aceito na nossa plataforma.\n\nDevido aos seguintes motivos:\n\n1- foi constatado que você não é um microempreendedor.\n2- Seus dados não foram encontrados.\n\nMas não fica triste, você pode ainda ser nosso usuário impulsione aí. Ajudando a impulsionar pequenos negócios a se tornarem grandes.\n\nEai, vamos firmar esse compromisso?\n\nVem navegar aqui conosco: https://impulsioneai.vercel.app \n\nAtenciosamente, equipe impulsione aí."
                 });
                 alert("Solicitação deletada com sucesso!")
             })

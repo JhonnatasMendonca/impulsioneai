@@ -76,7 +76,7 @@ function PerfilParceiro(){
         const [nicho, setNicho] = useState('');
 
         useEffect(() => {
-            axios.get(`http://localhost:8080/empreendedores/` + localStorage.getItem('id'))
+            axios.get(`https://impulsioneai-api.onrender.com/empreendedores/` + localStorage.getItem('id'))
                 .then(response => {
                     const empreendedor = response.data;
                     const { nicho } = empreendedor;
@@ -177,7 +177,7 @@ function PerfilParceiro(){
                 setDepoimento({ ...dadosDepoimento});
                 // console.log(dadosDepoimento);
                 
-                const response = await axiosInstance.post('http://localhost:8080/depoimento', dadosDepoimento);
+                const response = await axiosInstance.post('https://impulsioneai-api.onrender.com/depoimento', dadosDepoimento);
                 // console.log('Depoimento enviado com sucesso:', response.data);
                 alert("Depoimento enviado com sucesso!")
 
@@ -212,7 +212,7 @@ function PerfilParceiro(){
             const empreendedorId = localStorage.getItem('id');
             // console.log(empreendedorId)
 
-            axios.put(`http://localhost:8080/editarBiografia/${empreendedorId}`, {
+            axios.put(`https://impulsioneai-api.onrender.com/editarBiografia/${empreendedorId}`, {
                 biografia: novaBiografia
             })
             .then(response => {
@@ -495,7 +495,7 @@ function ProdutoCadastrado({idProduto, img, nomeProduto, preco, setShowEditModal
         const [nicho, setNicho] = useState('');
 
         useEffect(() => {
-            axios.get(`http://localhost:8080/empreendedores/` + localStorage.getItem('id'))
+            axios.get(`https://impulsioneai-api.onrender.com/empreendedores/` + localStorage.getItem('id'))
                 .then(response => {
                     const empreendedor = response.data;
                     const { nicho } = empreendedor;
